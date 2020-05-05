@@ -1,7 +1,5 @@
 import subprocess
-import socket
-import server_send_data
-import os
+
 
 def run_ls():
     lsData = ""
@@ -15,10 +13,10 @@ def run_ls():
 def run_quit():
     print("Ending program")
 
-def run_get(name_of_file, sock):
-    pass
-
-
-def run_put(name_of_file, sock):
-    # if os.path.exists(name_of_file):
-    pass
+# def run_get(name_of_file, sock):
+#     pass
+#
+#
+# def run_put(name_of_file, sock):
+#     # if os.path.exists(name_of_file):
+#     pass

@@ -2,7 +2,6 @@
 from socket import *
 import server_send_data as ssd
 import server_receive as sr
-import os
 import ephemeral as e
 import sys
 import server_run_commands as scmd
@@ -46,18 +45,18 @@ if __name__ == '__main__':
             sendSocket.close()
 
         if inst.startswith("quit"):
+            interSock.close()
             scmd.run_quit()
             break
+
+        if inst.startswith("put"):
+            print("User entered put command.")
 
         if inst.startswith("get"):
             print("User entered get command.")
 
-        if inst.startswith("put"):
-            # sendSocket = e.ephemeral(interSock)
-            # nameOfFile = sr.get_header(sendSocket)
-            print("User entered put command.")
-
     interSock.close()
+
 
 
 

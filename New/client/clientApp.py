@@ -1,7 +1,6 @@
 from socket import *
 import client_send_data as csd
 import client_receive as cr
-# import client_commands as cc
 import sys
 
 if __name__ == '__main__':
@@ -16,7 +15,7 @@ if __name__ == '__main__':
             print("Server port needs to be a digit")
     else:
         print("Incorrect invocation. Client should be invoked as: "
-              "client.py <address> <server port>")
+              "client.py <server machine> <server port>")
         quit()
 
     servName = sys.argv[1]
@@ -26,7 +25,6 @@ if __name__ == '__main__':
     userInput = input("ftp>")
 
     # ls operation
-
     if userInput.startswith("ls"):
         csd.send_it(initCliSock, "ls")
         ePort = int(cr.get_header(initCliSock))
@@ -41,6 +39,9 @@ if __name__ == '__main__':
         eSock.close()
 
     if userInput.startswith("put"):
-        pass
+        print("User entered the 'put' command")
+
+    if userInput.startswith("get"):
+        print("User entered to 'get' command.")
 
     initCliSock.close()
