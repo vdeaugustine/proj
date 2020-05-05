@@ -7,7 +7,7 @@ def run_ls():
     lsData = ""
     for line in subprocess.getstatusoutput('ls -l'):
         line = str(line)
-        print("Type of line: ", type(line))
+        # print("Type of line: ", type(line))
         lsData += line
     return lsData
 

@@ -9,7 +9,7 @@ def get_header(s):
 
     fsize_b = get_data(s, 10)
     if fsize_b is not "":
-        print("fsizeb: ", fsize_b, " type: ", type(fsize_b))
+        # print("fsizeb: ", fsize_b, " type: ", type(fsize_b))
         fsize = int(fsize_b)
 
     d = get_data(s, fsize)

@@ -24,7 +24,7 @@ import socket
 
 def send_it(s, d):
 
-    print("Data: ", d, "Type of data: ", type(d))
+    # print("Data: ", d, "Type of data: ", type(d))
     d_size = str(len(d))
 
     # set header to 10 bytes
