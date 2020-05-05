@@ -50,11 +50,7 @@ if __name__ == '__main__':
             break
 
         if inst.startswith("get"):
-            sendSocket = e.ephemeral(interSock)
-            nameOfFile = sr.get_header(sendSocket)
-
-            scmd.run_get(nameOfFile, sendSocket)
-            sendSocket.close()
+            print("User entered get command.")
 
         if inst.startswith("put"):
             # sendSocket = e.ephemeral(interSock)

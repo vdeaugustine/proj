@@ -16,12 +16,7 @@ def run_quit():
     print("Ending program")
 
 def run_get(name_of_file, sock):
-    file = open(name_of_file, "r")
-    buffer = file.read(1)
-    while "" != buffer:
-        server_send_data.send_it(sock, buffer)
-        buffer = file.read(1)
-    file.close()
+    pass
 
 
 def run_put(name_of_file, sock):
