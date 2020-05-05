@@ -25,6 +25,8 @@ if __name__ == '__main__':
 
     userInput = input("ftp>")
 
+    # ls operation
+
     if userInput.startswith("ls"):
         csd.send_it(initCliSock, "ls")
         ePort = int(cr.get_header(initCliSock))
@@ -37,5 +39,8 @@ if __name__ == '__main__':
                 break
             print(buff)
         eSock.close()
+
+    if userInput.startswith("put"):
+        pass
 
     initCliSock.close()

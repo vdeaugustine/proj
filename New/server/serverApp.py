@@ -40,13 +40,14 @@ if __name__ == '__main__':
             print("Performing ls")
             sendSocket = e.ephemeral(interSock)
             dataToSend = scmd.run_ls()
+            # codedData = dataToSend.encode()
             ssd.send_it(sendSocket, dataToSend)
             print("Finished ls")
             sendSocket.close()
 
         if inst.startswith("quit"):
             scmd.run_quit()
-            beak
+            break
 
         if inst.startswith("get"):
             sendSocket = e.ephemeral(interSock)

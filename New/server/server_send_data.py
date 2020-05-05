@@ -37,5 +37,6 @@ def send_it(s, d):
     # ensure all data is sent
     while total != len(data):
         sendingThis = data[total:]
+        encodeSend = sendingThis.encode()
         # print("Type of sendingThis: ", type(sendingThis))
-        total += s.send(sendingThis)
+        total += s.send(encodeSend)
